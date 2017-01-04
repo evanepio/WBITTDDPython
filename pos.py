@@ -1,7 +1,7 @@
 class PointOfSale():
-    def __init__(self, display):
+    def __init__(self, display, catalog={"12345": "$9.50", "98765": "$1.50"}):
         self.display = display
-        self.catalog = {"12345": "$9.50", "98765": "$1.50"}
+        self.catalog = catalog
 
     def on_barcode(self, barcode):
         if not barcode:
