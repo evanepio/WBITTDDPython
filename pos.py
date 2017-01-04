@@ -8,7 +8,6 @@ class PointOfSale():
             self.display.display_text("The barcode is invalid")
             return
 
-
         if barcode in self.catalog.keys():
             self.display.display_text(self.catalog[barcode])
         else:
