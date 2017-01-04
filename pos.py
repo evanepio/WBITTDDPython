@@ -10,7 +10,7 @@ class PointOfSale():
         catalog = {"12345": "$9.50", "98765": "$1.50"}
 
         if barcode == "12345":
-            self.display.display_text("$9.50")
+            self.display.display_text(catalog["12345"])
         elif barcode == "98765":
             self.display.display_text("$1.50")
         else:
