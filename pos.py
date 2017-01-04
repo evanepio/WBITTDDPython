@@ -9,9 +9,7 @@ class PointOfSale():
 
         catalog = {"12345": "$9.50", "98765": "$1.50"}
 
-        if barcode == "12345":
-            self.display.display_text(catalog[barcode])
-        elif barcode == "98765":
+        if barcode in catalog.keys():
             self.display.display_text(catalog[barcode])
         else:
             self.display.display_text("Item with barcode {} not found".format(barcode))
