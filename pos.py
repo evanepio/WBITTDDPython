@@ -15,9 +15,12 @@ class PointOfSale():
 
 
 class Display:
+    def __init__(self):
+        self.text = ""
+
     def get_text(self):
-        return self.__text
+        return self.text
 
     def display_text(self, value):
-        self.__text = value
+        self.text = value
 
