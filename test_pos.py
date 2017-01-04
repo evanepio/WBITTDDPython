@@ -17,3 +17,12 @@ def test_another_item_found():
     sut.on_barcode("98765")
 
     assert display.get_text() == "$1.50"
+
+
+def test_not_found():
+    display = Display()
+    sut = PointOfSale(display)
+
+    sut.on_barcode("99999")
+
+    assert display.get_text() == "Item with barcode 99999 not found"

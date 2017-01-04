@@ -7,6 +7,8 @@ class PointOfSale():
             self.display.display_text("$9.50")
         elif barcode == "98765":
             self.display.display_text("$1.50")
+        else:
+            self.display.display_text("Item with barcode 99999 not found")
 
 
 class Display:
