@@ -5,7 +5,6 @@ def test_item_found():
     display = Display()
     sut = PointOfSale(display)
 
-    # Test
     sut.on_barcode("12345")
 
     assert display.get_text() == "$9.50"
