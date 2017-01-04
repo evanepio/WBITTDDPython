@@ -7,6 +7,8 @@ class PointOfSale():
             self.display.display_text("The barcode is invalid")
             return
 
+        catalog = {"12345": "$9.50", "98765": "$1.50"}
+
         if barcode == "12345":
             self.display.display_text("$9.50")
         elif barcode == "98765":
