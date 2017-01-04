@@ -3,6 +3,10 @@ class PointOfSale():
         self.display = display
 
     def on_barcode(self, barcode):
+        if not barcode:
+            self.display.display_text("The barcode is invalid")
+            return
+
         if barcode == "12345":
             self.display.display_text("$9.50")
         elif barcode == "98765":

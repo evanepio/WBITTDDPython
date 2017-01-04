@@ -35,3 +35,12 @@ def test_another_item_not_found():
     sut.on_barcode("76543")
 
     assert display.get_text() == "Item with barcode 76543 not found"
+
+
+def test_empty_barcode():
+    display = Display()
+    sut = PointOfSale(display)
+
+    sut.on_barcode('')
+
+    assert display.get_text() == "The barcode is invalid"
