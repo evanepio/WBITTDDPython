@@ -1,5 +1,5 @@
 class PointOfSale():
-    def __init__(self, display, catalog={"12345": "$9.50", "98765": "$1.50"}):
+    def __init__(self, display, catalog):
         self.display = display
         self.catalog = catalog
 
