@@ -3,7 +3,7 @@ from pos import Display, PointOfSale
 
 def test_item_found():
     display = Display()
-    sut = PointOfSale(display, {"12345": "9.50", "98765": "1.50"})
+    sut = PointOfSale(display, {"12345": 9.50, "98765": 1.50})
 
     sut.on_barcode("12345")
 

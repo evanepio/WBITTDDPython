@@ -28,7 +28,7 @@ class Display:
         self.text = "The barcode is invalid"
 
     def display_price(self, price):
-        self.text = "${}".format(price)
+        self.text = "${:.2f}".format(float(price))
 
     def display_message(self, message):
         self.text = message
