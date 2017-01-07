@@ -9,7 +9,7 @@ class PointOfSale():
             return
 
         if barcode in self.catalog.keys():
-            self.display.display_message(self.catalog[barcode])
+            self.display.display_price(self.catalog[barcode])
         else:
             self.display.display_item_not_found_message(barcode)
 
@@ -29,6 +29,9 @@ class Display:
 
     def display_invalid_barcode_message(self):
         self.display_message("The barcode is invalid")
+
+    def display_price(self, price):
+        self.display_text("${}".format(price))
 
     def display_message(self, message):
         self.display_text(message)
