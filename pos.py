@@ -21,17 +21,14 @@ class Display:
     def get_text(self):
         return self.text
 
-    def display_text(self, value):
-        self.text = value
-
     def display_item_not_found_message(self, barcode):
-        self.display_message("Item with barcode {} not found".format(barcode))
+        self.text = "Item with barcode {} not found".format(barcode)
 
     def display_invalid_barcode_message(self):
-        self.display_message("The barcode is invalid")
+        self.text = "The barcode is invalid"
 
     def display_price(self, price):
-        self.display_text("${}".format(price))
+        self.text = "${}".format(price)
 
     def display_message(self, message):
-        self.display_text(message)
+        self.text = message
