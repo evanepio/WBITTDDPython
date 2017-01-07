@@ -5,13 +5,16 @@ class PointOfSale():
 
     def on_barcode(self, barcode):
         if not barcode:
-            self.display.display_text("The barcode is invalid")
+            self.display_message("The barcode is invalid")
             return
 
         if barcode in self.catalog.keys():
-            self.display.display_text(self.catalog[barcode])
+            self.display_message(self.catalog[barcode])
         else:
-            self.display.display_text("Item with barcode {} not found".format(barcode))
+            self.display_message("Item with barcode {} not found".format(barcode))
+
+    def display_message(self, message):
+        self.display.display_text(message)
 
 
 class Display:
