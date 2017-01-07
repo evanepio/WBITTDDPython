@@ -1,4 +1,4 @@
-class PointOfSale():
+class PointOfSale:
     def __init__(self, display, catalog):
         self.display = display
         self.catalog = catalog
@@ -35,4 +35,3 @@ class Display:
 
     def display_message(self, message):
         self.display_text(message)
-
