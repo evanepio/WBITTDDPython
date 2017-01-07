@@ -11,7 +11,10 @@ class PointOfSale():
         if barcode in self.catalog.keys():
             self.display_message(self.catalog[barcode])
         else:
-            self.display_message("Item with barcode {} not found".format(barcode))
+            self.display_item_not_found_message(barcode)
+
+    def display_item_not_found_message(self, barcode):
+        self.display_message("Item with barcode {} not found".format(barcode))
 
     def display_invalid_barcode_message(self):
         self.display_message("The barcode is invalid")
