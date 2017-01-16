@@ -8,8 +8,10 @@ class PointOfSale:
             self.display.display_invalid_barcode_message()
             return
 
-        if barcode in self.price_by_barcode.keys():
-            self.display.display_price(self.get_price_from_barcode(barcode))
+        price = self.get_price_from_barcode(barcode)
+
+        if price is not None:
+            self.display.display_price(price)
         else:
             self.display.display_item_not_found_message(barcode)
 
