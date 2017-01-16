@@ -9,9 +9,12 @@ class PointOfSale:
             return
 
         if barcode in self.price_by_barcode.keys():
-            self.display.display_price(self.price_by_barcode[barcode])
+            self.display.display_price(self.get_price_from_barcode(barcode))
         else:
             self.display.display_item_not_found_message(barcode)
+
+    def get_price_from_barcode(self, barcode):
+        return self.price_by_barcode[barcode]
 
 
 class Display:
