@@ -14,7 +14,7 @@ class PointOfSale:
             self.display.display_item_not_found_message(barcode)
 
     def get_price_from_barcode(self, barcode):
-        return self.price_by_barcode[barcode]
+        return self.price_by_barcode.get(barcode, None)
 
 
 class Display:
