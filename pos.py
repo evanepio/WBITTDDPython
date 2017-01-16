@@ -1,15 +1,15 @@
 class PointOfSale:
-    def __init__(self, display, catalog):
+    def __init__(self, display, price_by_barcode):
         self.display = display
-        self.catalog = catalog
+        self.price_by_barcode = price_by_barcode
 
     def on_barcode(self, barcode):
         if not barcode:
             self.display.display_invalid_barcode_message()
             return
 
-        if barcode in self.catalog.keys():
-            self.display.display_price(self.catalog[barcode])
+        if barcode in self.price_by_barcode.keys():
+            self.display.display_price(self.price_by_barcode[barcode])
         else:
             self.display.display_item_not_found_message(barcode)
 
