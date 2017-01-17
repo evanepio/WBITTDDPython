@@ -1,9 +1,9 @@
-from pos import Display, PointOfSale
+from pos import Display, PointOfSale, Catalog
 
 
 def test_item_found():
     display = Display()
-    sut = PointOfSale(display, {"12345": 9.50, "98765": 1.50})
+    sut = PointOfSale(display, Catalog({"12345": 9.50, "98765": 1.50}))
 
     sut.on_barcode("12345")
 
@@ -12,7 +12,7 @@ def test_item_found():
 
 def test_another_item_found():
     display = Display()
-    sut = PointOfSale(display, {"12345": 9.50, "98765": 1.50})
+    sut = PointOfSale(display, Catalog({"12345": 9.50, "98765": 1.50}))
 
     sut.on_barcode("98765")
 
@@ -21,7 +21,7 @@ def test_another_item_found():
 
 def test_item_not_found():
     display = Display()
-    sut = PointOfSale(display, {"12345": 9.50})
+    sut = PointOfSale(display, Catalog({"12345": 9.50}))
 
     sut.on_barcode("99999")
 
@@ -30,7 +30,7 @@ def test_item_not_found():
 
 def test_another_item_not_found():
     display = Display()
-    sut = PointOfSale(display, {"12345": 9.50})
+    sut = PointOfSale(display, Catalog({"12345": 9.50}))
 
     sut.on_barcode("76543")
 
@@ -39,7 +39,7 @@ def test_another_item_not_found():
 
 def test_empty_barcode():
     display = Display()
-    sut = PointOfSale(display, {})
+    sut = PointOfSale(display, Catalog({}))
 
     sut.on_barcode('')
 
