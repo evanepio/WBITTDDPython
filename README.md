@@ -7,3 +7,5 @@ If your IDE doesn't have a watch feature, you can install pytext-watch
     pip3 install pytest-watch
 
 From the root of the project, enter the command `ptw` and it will monitor files for changes and re-execute tests.
+
+In case I lose my bookmark again, the course is here: [http://online-training.jbrains.ca](http://online-training.jbrains.ca)
