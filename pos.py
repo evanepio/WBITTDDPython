@@ -32,9 +32,6 @@ class Display:
     def display_price(self, price):
         self.text = "${:.2f}".format(price)
 
-    def display_message(self, message):
-        self.text = message
-
 
 class Catalog:
     def __init__(self, prices_by_barcode):
